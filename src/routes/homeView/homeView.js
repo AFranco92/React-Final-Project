@@ -4,7 +4,8 @@ class HomeView extends Component {
     render() {
         return (
             <article className="home-view">
-                Home View
+                {/* <h1>Spotisearch</h1>
+                <p>Search an artist and look their content</p> */}
             </article>
         );
     }

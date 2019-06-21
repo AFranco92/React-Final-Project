@@ -1,20 +1,87 @@
+h1 {
+  font-size: 60px;
+}
+h5 {
+  color: white;
+  margin-left: 220px;
+  margin-top: 5px;
+}
 .main-view {
   text-align: center;
 }
 
 .main-view__logo {
-  animation: App-logo-spin infinite 20s linear;
+  float: left;
   height: 80px;
 }
 
 .main-view__header {
   background-color: #222;
-  height: 150px;
+  height: 70px;
   padding: 20px;
+}
+
+.headerlink {
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.searchbar {
+  border-radius: 4px;
+  min-height: 20px;
+  min-width: 200px;
 }
+
+.searchbar:focus {
+  border-color: green;
+}
+
+.searchbtn {
+  background-color:#6EE84D;
+  height: 26px;
+  width: 70px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#results {
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.result  {
+  margin: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: auto;
+  height: 200px;
+  background-color: darkslategrey;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 3px rgb(88, 199, 88);
+}
+
+.songimg {
+  margin-top: -37px;
+  margin-left: -155px;
+  max-width: 200px;
+  max-height: 190px;
+}
+
+@media all and (min-width: 720px) {
+  #results {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .result {
+    margin: 0px;
+  	width: 400px;
+  	height: 200px;
+    background-color: darkslategrey;
+  }
+}
+
