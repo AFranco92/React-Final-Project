@@ -1,20 +1,26 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import store from "../store/index";
+import {Provider} from 'react-redux';
 import MainView from './mainView/mainView';
 import HomeView from './homeView/homeView';
-import AboutView from './aboutView/aboutView';
-import SearchView from './searchView/searchView';
+import SearchView from '../components/SearchView';
+import ArtistAlbumsView from './artistAlbumsView/artistAlbumsView';
+import AlbumView from './albumView/albumView';
 
 const getRoutes = function() {
-    return (
-        <div>
-            <Route name="Main" component={MainView} />
-            <Switch>
-                <Route exact path="/" component={HomeView} />
-                <Route path="/about" component={AboutView} />
-                <Route path="/search" component={SearchView} />
-            </Switch>
-        </div>
+  return (
+    <div>
+      <Provider store={store}>
+        <Route name="Main" component={MainView} />
+          <Switch>
+            <Route exact path="/" component={HomeView} />
+            <Route path="/searchview" component={SearchView} />
+            <Route path="/artistalbums" component={ArtistAlbumsView} />
+            <Route path="/albumview" component={AlbumView} />
+        </Switch>
+      </Provider>
+    </div>
     )
 };
 

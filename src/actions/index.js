@@ -6,3 +6,17 @@ export function searchArtist(payload) {
     payload
   };
 }
+
+export function viewArtist(payload) {
+  return {
+    type: VIEW_ARTIST,
+    payload
+  }
+}
+
+export function viewAlbum(payload) {
+  return {
+    type: VIEW_ALBUM,
+    payload
+  }
+}
